@@ -8,15 +8,15 @@ try {
 
 
 
-  if (key == "") {
+  if (key === "") {
 
     return res.json({ message: 'Parâmetro "key" não fornecido na query ' })
   }
 
 
-  console.log(key[''])
+  console.log(key.key)
   const nfe = new NfeIo();
-  const result = await nfe.cnpj(key[''])
+  const result = await nfe.cnpj(key.key)
   console.log(result)
   res.json(result)
 
