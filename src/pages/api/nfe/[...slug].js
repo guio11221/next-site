@@ -3,9 +3,9 @@ import NfeIo from "./nfeio";
 
 export default async function XmlPage(req, res) {
 
+try {
   const key = req.query;
 
-  var query = key
 
 
   if (key == "") {
@@ -14,11 +14,15 @@ export default async function XmlPage(req, res) {
   }
 
 
-  console.log(key.key)
+  console.log(key[''])
   const nfe = new NfeIo();
-  const result = await nfe.cnpj(key.key)
+  const result = await nfe.cnpj(key[''])
   console.log(result)
   res.json(result)
 
+} catch (error) {
+  
+  res.json({ERROR: 'ERROR interno'})
+}
 }
 

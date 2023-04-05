@@ -65,6 +65,7 @@ export default function Home() {
             </Head>
             <Menu />
             <div style={{ backgroundColor: 'var(--surface-800)', color: 'var(--highlight-text-color)', borderRadius: 'var(--border-radius)', padding: '3rem' }}>
+                <center> <h1 style={{color: 'red'}}>BY: GUII SANTOS</h1></center>
             <Box sx={{ width: '100%' }}>
                     <LinearProgress />
                 </Box>
